@@ -8,7 +8,11 @@
 
   **✨ Navigation Controller 응용**
 
-  <img src="/Users/profitjean/Desktop/스크린샷 2020-04-24 오후 10.37.11.png" alt="스크린샷 2020-04-24 오후 10.37.11" style="zoom:25%;" /> <img src="/Users/profitjean/Desktop/스크린샷 2020-04-24 오후 10.37.20.png" alt="스크린샷 2020-04-24 오후 10.37.2![스크린샷 2020-04-24 오후 10.37.27](/Users/profitjean/Desktop/스크린샷 2020-04-24 오후 10.37.27.png)0" style="zoom:25%;" /><img src="/Users/profitjean/Desktop/스크린샷 2020-04-24 오후 10.37.27.png" alt="스크린샷 2020-04-24 오후 10.37.27" style="zoom:25%;" />
+  <img src="/Users/profitjean/Desktop/스크린샷 2020-04-24 오후 10.37.11.png" style="zoom:25%;" />
+
+  
+
+  
 
   👉네비게이션 컨트롤러는 스택처럼 쌓아올린다는 구조~~
 
@@ -17,8 +21,6 @@
   
 
   ✨ **로그인 화면 구현**
-
-  <img src="/Users/profitjean/Desktop/Simulator Screen Shot - iPhone SE (2nd generation) - 2020-04-24 at 22.52.58.png" alt="Simulator Screen Shot - iPhone SE (2nd generation) - 2020-04-24 at 22.52.58" style="zoom:25%;" /><img src="/Users/profitjean/Desktop/Simulator Screen Shot - iPhone SE (2nd generation) - 2020-04-24 at 22.53.23.png" alt="Simulator Screen Shot - iPhone SE (2nd generation) - 2020-04-24 at 22.53.23" style="zoom:25%;" /><img src="/Users/profitjean/Desktop/Simulator Screen Shot - iPhone SE (2nd generation) - 2020-04-24 at 23.03.04.png" alt="Simulator Screen Shot - iPhone SE (2nd generation) - 2020-04-24 at 23.03.04" style="zoom:25%;" />
 
   👉 로그인화면/로그인화면/회원가입화면으로 구성
 
