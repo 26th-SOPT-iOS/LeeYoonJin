@@ -8,9 +8,7 @@
 
   **✨ Navigation Controller 응용**
 
-  <img src="/Users/profitjean/Desktop/스크린샷 2020-04-24 오후 10.37.11.png" style="zoom:25%;" />
-
-  
+  <img src="/Users/profitjean/Desktop/SOPT/LeeYoonJin/img/스크린샷 2020-04-24 오후 10.37.11.png" style="zoom:25%;" /><img src="/Users/profitjean/Desktop/SOPT/LeeYoonJin/img/스크린샷 2020-04-24 오후 10.37.20.png" alt="스크린샷 2020-04-24 오후 10.37.20" style="zoom:25%;" /><img src="/Users/profitjean/Desktop/SOPT/LeeYoonJin/img/스크린샷 2020-04-24 오후 10.37.27.png" alt="스크린샷 2020-04-24 오후 10.37.27" style="zoom:25%;" />
 
   
 
