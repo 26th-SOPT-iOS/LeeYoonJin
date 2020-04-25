@@ -8,10 +8,6 @@
 
   **✨ Navigation Controller 응용**
 
-  <img src="/Users/profitjean/Desktop/SOPT/LeeYoonJin/img/스크린샷 2020-04-24 오후 10.37.11.png" style="zoom:25%;" /><img src="/Users/profitjean/Desktop/SOPT/LeeYoonJin/img/스크린샷 2020-04-24 오후 10.37.20.png" alt="스크린샷 2020-04-24 오후 10.37.20" style="zoom:25%;" /><img src="/Users/profitjean/Desktop/SOPT/LeeYoonJin/img/스크린샷 2020-04-24 오후 10.37.27.png" alt="스크린샷 2020-04-24 오후 10.37.27" style="zoom:25%;" />
-
-  
-
   👉네비게이션 컨트롤러는 스택처럼 쌓아올린다는 구조~~
 
   👉 버튼을 push로 연결
@@ -19,6 +15,12 @@
   
 
   ✨ **로그인 화면 구현**
+
+  <img src="./img/2-1.png" alt="2-1" style="zoom:25%;" /> 
+
+  
+
+  
 
   👉 로그인화면/로그인화면/회원가입화면으로 구성
 
