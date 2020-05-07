@@ -43,37 +43,7 @@
                                 </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="아직">
-                                            <attributes>
-                                                <color key="NSColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <font key="NSFont" size="14" name=".AppleSDGothicNeoI-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content=" ">
-                                            <attributes>
-                                                <color key="NSColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <font key="NSFont" metaFont="menu" size="14"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="회원이">
-                                            <attributes>
-                                                <color key="NSColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <font key="NSFont" size="14" name=".AppleSDGothicNeoI-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content=" ">
-                                            <attributes>
-                                                <color key="NSColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <font key="NSFont" metaFont="menu" size="14"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="아니신가요">
-                                            <attributes>
-                                                <color key="NSColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <font key="NSFont" size="14" name=".AppleSDGothicNeoI-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="? ">
+                                        <fragment content="아직 회원이 아니신가요? ">
                                             <attributes>
                                                 <color key="NSColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <font key="NSFont" metaFont="menu" size="14"/>
@@ -82,7 +52,7 @@
                                         <fragment content="회원가입하기">
                                             <attributes>
                                                 <color key="NSColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <font key="NSFont" size="14" name=".AppleSDGothicNeoI-Regular"/>
+                                                <font key="NSFont" metaFont="menu" size="14"/>
                                                 <integer key="NSUnderline" value="1"/>
                                             </attributes>
                                         </fragment>
@@ -106,9 +76,9 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="l8w-Yh-Xl8" secondAttribute="bottom" constant="10" id="6Uf-Cf-l8S"/>
                                     <constraint firstItem="l8w-Yh-Xl8" firstAttribute="top" secondItem="Pgh-QZ-OLB" secondAttribute="top" constant="12" id="NLk-wI-E08"/>
-                                    <constraint firstAttribute="trailing" secondItem="l8w-Yh-Xl8" secondAttribute="trailing" constant="245" id="SaF-KJ-aev"/>
                                     <constraint firstItem="l8w-Yh-Xl8" firstAttribute="leading" secondItem="Pgh-QZ-OLB" secondAttribute="leading" constant="18" id="Tva-c4-a74"/>
                                     <constraint firstAttribute="height" constant="44" id="Zps-Ce-vhT"/>
+                                    <constraint firstAttribute="trailing" secondItem="l8w-Yh-Xl8" secondAttribute="trailing" constant="245" id="gAO-Nx-byw"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pT3-Qm-dqZ">
@@ -619,7 +589,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fc-Zv-YhF">
-                                <rect key="frame" x="38" y="473.66666666666669" width="300" height="48.000000000000057"/>
+                                <rect key="frame" x="38" y="483" width="300" height="48"/>
                                 <color key="backgroundColor" red="0.02679337561" green="0.2230156958" blue="0.66278725859999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="iSc-Fc-woy"/>
@@ -667,10 +637,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nan-Iq-ATe">
-                                <rect key="frame" x="38" y="336" width="300" height="39.333333333333314"/>
+                                <rect key="frame" x="38" y="336" width="300" height="44"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9j-TA-hiH">
-                                        <rect key="frame" x="19" y="10.999999999999998" width="36" height="17.333333333333329"/>
+                                        <rect key="frame" x="19" y="11" width="36" height="22"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -678,6 +648,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.92940050360000004" green="0.92940586810000003" blue="0.92942005400000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="79H-Q4-juP"/>
                                     <constraint firstItem="k9j-TA-hiH" firstAttribute="top" secondItem="Nan-Iq-ATe" secondAttribute="top" constant="11" id="KGF-CY-IfJ"/>
                                     <constraint firstAttribute="bottom" secondItem="k9j-TA-hiH" secondAttribute="bottom" constant="11" id="OQE-Vm-xNe"/>
                                     <constraint firstItem="k9j-TA-hiH" firstAttribute="leading" secondItem="Nan-Iq-ATe" secondAttribute="leading" constant="19" id="Pxe-Vp-g7V"/>
@@ -685,10 +656,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ool-dn-804">
-                                <rect key="frame" x="38" y="389.33333333333331" width="300" height="39.333333333333314"/>
+                                <rect key="frame" x="38" y="394" width="300" height="44"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oSu-vm-ZYW">
-                                        <rect key="frame" x="19" y="10.999999999999998" width="48" height="17.333333333333329"/>
+                                        <rect key="frame" x="19" y="11" width="48" height="22"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -698,6 +669,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="oSu-vm-ZYW" secondAttribute="trailing" constant="233" id="9mv-xQ-ofF"/>
                                     <constraint firstItem="oSu-vm-ZYW" firstAttribute="top" secondItem="Ool-dn-804" secondAttribute="top" constant="11" id="UIO-zK-vTJ"/>
+                                    <constraint firstAttribute="height" constant="44" id="dmC-Oo-vXx"/>
                                     <constraint firstAttribute="bottom" secondItem="oSu-vm-ZYW" secondAttribute="bottom" constant="11" id="svw-nq-977"/>
                                     <constraint firstItem="oSu-vm-ZYW" firstAttribute="leading" secondItem="Ool-dn-804" secondAttribute="leading" constant="19" id="xmx-Cf-yJ2"/>
                                 </constraints>
