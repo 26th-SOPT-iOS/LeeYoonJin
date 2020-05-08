@@ -16,7 +16,7 @@
 
   ✨ **로그인 화면 구현**
 
-  <img src="./img/2-1.png" alt="2-1" style="zoom:25%;" width = "100px"/> 
+  <img src="./img/2-1.png" alt="2-1" style="zoom:25%;" width = "300px"/> 
 
   
 
