@@ -18,10 +18,6 @@
 
   <img src="./img/2-1.png" alt="2-1" style="zoom:25%;" width = "300px"/> 
 
-  
-
-  
-
   👉 로그인화면/로그인화면/회원가입화면으로 구성
 
   * 회원가입 화면은 네비게이션 컨트롤러로 연결
@@ -45,5 +41,15 @@
 
   * navigationController에 접근하여 popViewController(animated : true) 통해 로그아웃 후에 맨 처음 화면으로 돌아갈 수 있게 설정
 
+
+------
+
+* **2주차 과제**
+
+  계산기 과제
+
+  <img src="/Users/profitjean/Desktop/SOPT/LeeYoonJin/img/calculator.png" alt="calculator" style="zoom:25%;" width = "300px" />
+
   
 
+  
