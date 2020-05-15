@@ -77,7 +77,7 @@
 
 * **3주차 과제**
 
-  <img src="./img/3-1.png" alt = "3-1" style="zoom:25%;" width="300px" />    <img src="./img/3-2.png" alt = "3-2" style="zoom:25%;" width="300px" />  <img src="./img/3-3.png" alt = "3-3" style="zoom:25%;" width="300px" />
+  <img src="./img/3-1.png" alt = "3-1" style="zoom:15%;" width="300px" />  <img src="./img/3-2.png" alt = "3-2" style="zoom:15%;" width="300px" />   <img src="./img/3-3.png" alt = "3-3" style="zoom:15%;" width="300px" />
 
   
 
@@ -173,6 +173,7 @@
     ```
 
   * 선택/선택 해제 시 색깔 새롭게 지정
+
     출처 : https://stackoverflow.com/questions/31117069/changing-tab-bar-item-image-and-text-color-ios/50222727
 
     ```swift
@@ -185,6 +186,7 @@
     // 그럼 여기서 나타나는 문제가 기본 아이콘을 사용하는 친구 탭 아이콘 색깔은 바뀌지 않는다는 것임, 그래서 우리는 Appdelegate파일로 이동해서 추가적으로 색상을 변경해주는 코드를 작성해야한다
 
   * Appdelegate 파일에 추가적으로 코드 작성해주기
+
     출처 : https://www.peterwitham.com/swift-archives/how-to-change-the-ios-tab-bar-colors/
 
     ```swift
