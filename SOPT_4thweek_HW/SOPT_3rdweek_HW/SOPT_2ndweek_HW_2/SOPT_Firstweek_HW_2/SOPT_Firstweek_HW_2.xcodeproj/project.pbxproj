@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2455061246FC3CB0012E91A /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455060246FC3CB0012E91A /* APIConstants.swift */; };
+		F2455063246FC3F60012E91A /* SigninData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455062246FC3F60012E91A /* SigninData.swift */; };
+		F245506A246FCDA70012E91A /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2455069246FCDA70012E91A /* LoginService.swift */; };
+		F245506C246FCDAB0012E91A /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F245506B246FCDAB0012E91A /* NetworkResult.swift */; };
+		F245506E246FD3420012E91A /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F245506D246FD3420012E91A /* SignupData.swift */; };
+		F2455070246FD5040012E91A /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F245506F246FD5040012E91A /* SignupService.swift */; };
 		F2487FF8246C76F5007695E0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2487FF7246C76F5007695E0 /* ListViewController.swift */; };
 		F2487FFC246C7F01007695E0 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2487FFB246C7F01007695E0 /* TabController.swift */; };
 		F2488002246D1512007695E0 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2488001246D1512007695E0 /* FriendCell.swift */; };
@@ -19,9 +25,19 @@
 		F28E80EC244ACC8F00E2A31E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28E80EA244ACC8F00E2A31E /* LaunchScreen.storyboard */; };
 		F28E80F4244AD3C900E2A31E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28E80F3244AD3C900E2A31E /* LoginViewController.swift */; };
 		F28E80F6244AD3F100E2A31E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28E80F5244AD3F100E2A31E /* SignUpViewController.swift */; };
+		FBD507A467D4E5ED04A4B715 /* Pods_SOPT_Firstweek_HW_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2C5E293020082119034F41 /* Pods_SOPT_Firstweek_HW_2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		588E586758DF0E1F7E510CCF /* Pods-SOPT_Firstweek_HW_2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT_Firstweek_HW_2.debug.xcconfig"; path = "Target Support Files/Pods-SOPT_Firstweek_HW_2/Pods-SOPT_Firstweek_HW_2.debug.xcconfig"; sourceTree = "<group>"; };
+		A49C439C00F9F4DD1073295D /* Pods-SOPT_Firstweek_HW_2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOPT_Firstweek_HW_2.release.xcconfig"; path = "Target Support Files/Pods-SOPT_Firstweek_HW_2/Pods-SOPT_Firstweek_HW_2.release.xcconfig"; sourceTree = "<group>"; };
+		BD2C5E293020082119034F41 /* Pods_SOPT_Firstweek_HW_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOPT_Firstweek_HW_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2455060246FC3CB0012E91A /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		F2455062246FC3F60012E91A /* SigninData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninData.swift; sourceTree = "<group>"; };
+		F2455069246FCDA70012E91A /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		F245506B246FCDAB0012E91A /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		F245506D246FD3420012E91A /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
+		F245506F246FD5040012E91A /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
 		F2487FF7246C76F5007695E0 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F2487FFB246C7F01007695E0 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		F2488001246D1512007695E0 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
@@ -43,22 +59,66 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD507A467D4E5ED04A4B715 /* Pods_SOPT_Firstweek_HW_2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F2455054246FACD00012E91A /* Resources */ = {
+		ACEAEC829EBD488AFDECB3CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F2455055246FACFD0012E91A /* Storyboards */,
+				BD2C5E293020082119034F41 /* Pods_SOPT_Firstweek_HW_2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2455064246FC42A0012E91A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F28E80DF244ACC8D00E2A31E /* AppDelegate.swift */,
+				F28E80E1244ACC8D00E2A31E /* SceneDelegate.swift */,
+				F2455067246FC44A0012E91A /* ViewControllers */,
+				F2455066246FC4440012E91A /* Cells */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F2455065246FC4360012E91A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F245506D246FD3420012E91A /* SignupData.swift */,
+				F2455062246FC3F60012E91A /* SigninData.swift */,
+				F2455060246FC3CB0012E91A /* APIConstants.swift */,
 				F28E80E8244ACC8F00E2A31E /* Assets.xcassets */,
+				F2455068246FC4680012E91A /* Storyboards */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		F2455055246FACFD0012E91A /* Storyboards */ = {
+		F2455066246FC4440012E91A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F2488001246D1512007695E0 /* FriendCell.swift */,
+				F2488003246D166F007695E0 /* FriendInformation.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F2455067246FC44A0012E91A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F28E80E3244ACC8D00E2A31E /* MainViewController.swift */,
+				F2487FF7246C76F5007695E0 /* ListViewController.swift */,
+				F2487FFB246C7F01007695E0 /* TabController.swift */,
+				F28E80F3244AD3C900E2A31E /* LoginViewController.swift */,
+				F28E80F5244AD3F100E2A31E /* SignUpViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F2455068246FC4680012E91A /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				F28E80E5244ACC8D00E2A31E /* Main.storyboard */,
@@ -67,43 +127,13 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		F2455056246FAD1D0012E91A /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				F2455058246FAE5D0012E91A /* Cells */,
-				F2455057246FADA50012E91A /* ViewControllers */,
-				F28E80E1244ACC8D00E2A31E /* SceneDelegate.swift */,
-				F28E80DF244ACC8D00E2A31E /* AppDelegate.swift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		F2455057246FADA50012E91A /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				F2487FFB246C7F01007695E0 /* TabController.swift */,
-				F28E80F5244AD3F100E2A31E /* SignUpViewController.swift */,
-				F28E80F3244AD3C900E2A31E /* LoginViewController.swift */,
-				F2487FF7246C76F5007695E0 /* ListViewController.swift */,
-				F28E80E3244ACC8D00E2A31E /* MainViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		F2455058246FAE5D0012E91A /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				F2488003246D166F007695E0 /* FriendInformation.swift */,
-				F2488001246D1512007695E0 /* FriendCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		F28E80D3244ACC8D00E2A31E = {
 			isa = PBXGroup;
 			children = (
 				F28E80DE244ACC8D00E2A31E /* SOPT_Firstweek_HW_2 */,
 				F28E80DD244ACC8D00E2A31E /* Products */,
+				FA3832897D9E10BE67E55BFE /* Pods */,
+				ACEAEC829EBD488AFDECB3CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,11 +148,23 @@
 		F28E80DE244ACC8D00E2A31E /* SOPT_Firstweek_HW_2 */ = {
 			isa = PBXGroup;
 			children = (
-				F2455056246FAD1D0012E91A /* Sources */,
-				F2455054246FACD00012E91A /* Resources */,
+				F245506F246FD5040012E91A /* SignupService.swift */,
+				F2455069246FCDA70012E91A /* LoginService.swift */,
+				F245506B246FCDAB0012E91A /* NetworkResult.swift */,
+				F2455065246FC4360012E91A /* Resources */,
+				F2455064246FC42A0012E91A /* Sources */,
 				F28E80ED244ACC8F00E2A31E /* Info.plist */,
 			);
 			path = SOPT_Firstweek_HW_2;
+			sourceTree = "<group>";
+		};
+		FA3832897D9E10BE67E55BFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				588E586758DF0E1F7E510CCF /* Pods-SOPT_Firstweek_HW_2.debug.xcconfig */,
+				A49C439C00F9F4DD1073295D /* Pods-SOPT_Firstweek_HW_2.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F28E80F0244ACC8F00E2A31E /* Build configuration list for PBXNativeTarget "SOPT_Firstweek_HW_2" */;
 			buildPhases = (
+				9D769976A699BEB16D20D640 /* [CP] Check Pods Manifest.lock */,
 				F28E80D8244ACC8D00E2A31E /* Sources */,
 				F28E80D9244ACC8D00E2A31E /* Frameworks */,
 				F28E80DA244ACC8D00E2A31E /* Resources */,
+				268770029E9D7F29ACA567C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,17 +235,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		268770029E9D7F29ACA567C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOPT_Firstweek_HW_2/Pods-SOPT_Firstweek_HW_2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOPT_Firstweek_HW_2/Pods-SOPT_Firstweek_HW_2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOPT_Firstweek_HW_2/Pods-SOPT_Firstweek_HW_2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D769976A699BEB16D20D640 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SOPT_Firstweek_HW_2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F28E80D8244ACC8D00E2A31E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F2487FFC246C7F01007695E0 /* TabController.swift in Sources */,
+				F245506E246FD3420012E91A /* SignupData.swift in Sources */,
 				F28E80F4244AD3C900E2A31E /* LoginViewController.swift in Sources */,
+				F2455070246FD5040012E91A /* SignupService.swift in Sources */,
 				F2488004246D166F007695E0 /* FriendInformation.swift in Sources */,
 				F28E80E4244ACC8D00E2A31E /* MainViewController.swift in Sources */,
 				F2487FF8246C76F5007695E0 /* ListViewController.swift in Sources */,
 				F28E80E0244ACC8D00E2A31E /* AppDelegate.swift in Sources */,
+				F245506C246FCDAB0012E91A /* NetworkResult.swift in Sources */,
+				F2455063246FC3F60012E91A /* SigninData.swift in Sources */,
+				F245506A246FCDA70012E91A /* LoginService.swift in Sources */,
+				F2455061246FC3CB0012E91A /* APIConstants.swift in Sources */,
 				F28E80E2244ACC8D00E2A31E /* SceneDelegate.swift in Sources */,
 				F28E80F6244AD3F100E2A31E /* SignUpViewController.swift in Sources */,
 				F2488002246D1512007695E0 /* FriendCell.swift in Sources */,
@@ -346,6 +438,7 @@
 		};
 		F28E80F1244ACC8F00E2A31E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 588E586758DF0E1F7E510CCF /* Pods-SOPT_Firstweek_HW_2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -364,6 +457,7 @@
 		};
 		F28E80F2244ACC8F00E2A31E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A49C439C00F9F4DD1073295D /* Pods-SOPT_Firstweek_HW_2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
