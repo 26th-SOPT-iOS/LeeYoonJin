@@ -25,32 +25,9 @@ class LoginViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated:true); // 네비게이션 바의 뒤로가기 버튼 숨기기
         
     }
-    /*func setNavigationBar(){
-         let bar:UINavigationBar! =  self.navigationController?.navigationBar
-         bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        bar.shadowImage = UIImage()
-         bar.backgroundColor = UIColor.clear
-
-     }*/
-     
  
    
     var id: String? //아이디 값
     var pw: String? //비밀번호 값
     
-    //@IBOutlet weak var idLabel: UILabel!
-    //@IBOutlet weak var pwLabel: UILabel!
-    /*@IBAction func DoLogout(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    private func setLabels(){
-        guard let id = self.id else{return}
-        guard let pw = self.pw else{return}
-        
-        //idLabel.text = id
-        //pwLabel.text = pw
-        
-        
-        
-    }*/
 }

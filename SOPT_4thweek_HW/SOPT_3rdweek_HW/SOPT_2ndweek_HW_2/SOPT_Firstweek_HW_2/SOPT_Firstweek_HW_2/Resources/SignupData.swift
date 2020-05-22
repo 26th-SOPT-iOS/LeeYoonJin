@@ -33,4 +33,3 @@ struct SignupData: Codable { // encode, decode 둘 다 가능하게 한다.
     
 }
 
-

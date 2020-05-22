@@ -9,7 +9,7 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    
     @IBOutlet weak var signAdmitted: UIButton!
     @IBOutlet weak var idTextField: UITextField! // 이메일 입력란
     @IBOutlet weak var pwTextField: UITextField! // 비번 입력란
@@ -20,9 +20,13 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var email: UIView!
     @IBOutlet weak var password: UIView!
     
+    @IBOutlet weak var id: UIView!
+    
+    @IBOutlet weak var phoneNum: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.setNavigationBar()
         self.navigationController?.navigationBar.tintColor = UIColor(red: 7/255, green: 59/255, blue: 163/255, alpha: 1.0) // 네비게이션컨트롤러 뒤로가기 버튼 색깔 변경
@@ -31,24 +35,23 @@ class SignUpViewController: UIViewController {
         name.layer.cornerRadius = 22.0
         email.layer.cornerRadius = 22.0
         password.layer.cornerRadius = 22.0
+        id.layer.cornerRadius = 22.0
+        phoneNum.layer.cornerRadius = 22.0
         
-
+        
         
     }
+    
+ 
     // 네비게이션 상단 바 투명하게 바꾸기
     func setNavigationBar(){
-         let bar:UINavigationBar! =  self.navigationController?.navigationBar
-         bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-                 bar.shadowImage = UIImage()
-         bar.backgroundColor = UIColor.clear
-     }
-
+        let bar:UINavigationBar! =  self.navigationController?.navigationBar
+        bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        bar.shadowImage = UIImage()
+        bar.backgroundColor = UIColor.clear
+    }
+    
     @IBAction func doSignUp(_ sender: Any) {
- 
-        /*let receiveViewController = self.storyboard?.instantiateViewController(withIdentifier: "mainViewController") as! MainViewController
-             receiveViewController.modalPresentationStyle = .fullScreen
-             self.present(receiveViewController, animated: true, completion: nil)
-        self.navigationController?.popViewController(animated: true)*/
         
         guard let signName = nameTextField.text else {return} //이름
         guard let signEmail = idTextField.text else{return} //이메일
@@ -62,40 +65,32 @@ class SignUpViewController: UIViewController {
             switch networkResult {
                 
             case .success(_): //성공. 토큰을 디폴트 데이터베이스에 저장한 후, 다음 화면으로 전환하게 된다
-                /*let receiveViewController = self.storyboard?.instantiateViewController(withIdentifier: "mainViewController") as! MainViewController
-                       receiveViewController.modalPresentationStyle = .fullScreen
-                       self.present(receiveViewController, animated: true, completion: nil)
-                self.navigationController?.popViewController(animated: true)*/
                 guard let receiveViewController = self.storyboard?.instantiateViewController(identifier: "mainViewController") as? MainViewController else {return}
-                     receiveViewController.modalPresentationStyle = .fullScreen
-                     //receiveViewController.id = idTextField.text
-                     //receiveViewController.pw = pwTextField.text
+                receiveViewController.modalPresentationStyle = .fullScreen
+                self.present(receiveViewController, animated: true, completion: nil)
                 
-                  self.present(receiveViewController, animated: true, completion: nil)
+                receiveViewController.idTextField.text = signUserid
+                receiveViewController.pwTextField.text = signPwd
+                receiveViewController.AutoLogin()
+        
                 print("\(signUserid)")
                 print("\(signPwd)")
-              
-                //guard let token = token as? String else { return }
-                //UserDefaults.standard.set(token, forKey: "token")
-                //guard let tabbarController = self.storyboard?.instantiateViewController(identifier:
-                    //"Tab") as? UITabBarController else { return }
-                //tabbarController.modalPresentationStyle = .fullScreen
-                //self.present(tabbarController, animated: true, completion: nil)
                 
             case .requestErr(let message): // 실패
-                    
-                    guard let message = message as? String else { return }
-                    // 알림창 구현하기(회원가입 실패)
-                    let alertViewController = UIAlertController(title: "회원가입 실패", message: message, preferredStyle: .alert)
-                    let action = UIAlertAction(title: "확인", style: .cancel, handler: nil)
-                    alertViewController.addAction(action)
-                    self.present(alertViewController, animated: true, completion: nil)
+                
+                guard let message = message as? String else { return }
+                // 알림창 구현하기(회원가입 실패)
+                let alertViewController = UIAlertController(title: "회원가입 실패", message: message, preferredStyle: .alert)
+                let action = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+                alertViewController.addAction(action)
+                self.present(alertViewController, animated: true, completion: nil)
                 
             case .pathErr: print("")
             case .serverErr: print("")
             case .networkFail: print("") }
         }
     }
+
     
     
 }
