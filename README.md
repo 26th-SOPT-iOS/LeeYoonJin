@@ -275,7 +275,7 @@ SignupService.shared.signup(id: signUserid, pwd: signPwd, name: signName, email:
 
 👉 mainViewController의 AutoLogin()
 
-~~원래 SignupService 파일에 Tab VC까지 전환하는 코드 넣었는데 안 넘어가서 급하게 함수 만들었음  단박에 문제 해결한 갓윤재에게 박수를~~~
+~~원래 SignupService 파일에 Tab VC까지 전환하는 코드 넣었는데 안 넘어가서 급하게 함수 만들었음  단박에 문제 해결한 갓윤재에게 박수를~~
 
 ```swift
  func AutoLogin(){
