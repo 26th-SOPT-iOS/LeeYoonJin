@@ -53,10 +53,8 @@ struct SignupService {
             print("\(decodedData)")
             print(decodedData)
             return .success(data)
-            //guard let tokenData = decodedData.data else { return .requestErr(decodedData.message) }
         }
         return .requestErr(decodedData.message)
-        //return .success(tokenData.jwt)
     }
     
 }

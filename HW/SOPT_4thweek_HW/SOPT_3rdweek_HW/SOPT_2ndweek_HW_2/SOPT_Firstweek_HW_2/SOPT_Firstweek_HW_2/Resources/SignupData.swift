@@ -13,7 +13,7 @@ struct SignupData: Codable { // encode, decode 둘 다 가능하게 한다.
     var status: Int
     var success: Bool
     var message: String
-    //var data: TokenData?
+   
     
     enum CodingKeys: String, CodingKey {
         case status = "status"
@@ -28,7 +28,7 @@ struct SignupData: Codable { // encode, decode 둘 다 가능하게 한다.
         status = (try? values.decode(Int.self, forKey: .status)) ?? -1
         success = (try? values.decode(Bool.self, forKey: .success)) ?? false
         message = (try? values.decode(String.self, forKey: .message)) ?? ""
-        //data = (try? values.decode(TokenData.self, forKey: .data)) ?? nil // key값 없으면 nil값으로 들어오게
+      
      }
     
 }

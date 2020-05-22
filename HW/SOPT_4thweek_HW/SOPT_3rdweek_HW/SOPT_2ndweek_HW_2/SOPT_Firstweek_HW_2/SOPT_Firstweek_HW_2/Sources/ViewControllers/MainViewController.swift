@@ -9,7 +9,7 @@
 import UIKit
 import BEMCheckBox
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, BEMCheckBoxDelegate {
 // 앱 실행 시 초기 화면(로그인창)
     @IBOutlet weak var login: UIButton!
     @IBOutlet weak var signin: UIButton!
@@ -17,6 +17,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var password: UIView!
     
     override func viewDidLoad() {
+        //checkBox.delegate = self
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         login.layer.cornerRadius = 24.0
@@ -29,6 +30,10 @@ class MainViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear// 네비게이션 바 투명하게 만들기
     }
+    
+    //func didTap(_ checkBox: BEMCheckBox) {
+    //   UserDefaults.standard.set()
+    //}
 
     
     @IBAction func moveTab(_ sender: UIButton) {
@@ -87,7 +92,8 @@ class MainViewController: UIViewController {
                 alertViewController.addAction(action)
                 self.present(alertViewController, animated: true, completion: nil)
             case .pathErr: print("path")
-            case .serverErr: print("serverErr") case .networkFail: print("networkFail")
+            case .serverErr: print("serverErr")
+            case .networkFail: print("networkFail")
                 
             }
         }
