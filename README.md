@@ -310,4 +310,223 @@ SignupService.shared.signup(id: signUserid, pwd: signPwd, name: signName, email:
 
 > <u>근데 왜 회원가입 VC에서는 로그인 화면까지 값 전달은 잘 됐는데 왜 탭바로 안 넘어가졌는지 아직도 의문임</u>
 
-✨~~자동로그인#2 - BEMCheckBox 과제는 진행중임~~
+------
+
+**5주차 과제 / 6주차 과제**
+
+✨ 장바구니 화면 - pager controller
+
+<img src="./img/pagerTab.png" alt = "tab icon" style="zoom:25%;" width="300px" />
+
+
+
+> 한 화면에 두 개 이상의 뷰를 스와이프 동작으로 전환 가능하게 만들어준다. 시중에 출시된 많은 앱들이 사용하는 화면 구성이지만 외부에서 제공하는 라이브러리 설치해서 사용해야한다(코코아팟)
+>
+>  파트장님이 알려주신 라이브러리 :  https://github.com/xmartlabs/XLPagerTabStrip
+>
+> 위 깃헙의 리드미 파일에 튜토리얼로 올려놓은 사이트 : https://medium.com/michaeladeyeri/how-to-implement-android-like-tab-layouts-in-ios-using-swift-3-578516c3aa9
+
+👉 XLPagerStrip 
+
+> 페이지 컨트롤 애니메이션과 메뉴바 디자인을 담당하는 부모 뷰 한 개(parent), 컨텐츠를 담고 있는 자식 뷰 여러 개(child)로 구성되어있다.  부모 뷰가 여러 자식뷰들의 지정된 identfier를 호출하여 화면에 보여주는 방식이라고 볼 수 있겠다.
+
+👉 step1. parentViewController
+
+```swift
+    settings.style.buttonBarBackgroundColor = .white
+            settings.style.buttonBarItemBackgroundColor = .white
+            settings.style.selectedBarBackgroundColor = purpleInspireColor
+            settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
+            settings.style.selectedBarHeight = 2.0
+            settings.style.buttonBarMinimumLineSpacing = 0
+            settings.style.buttonBarItemTitleColor = .black
+            settings.style.buttonBarItemsShouldFillAvailableWidth = true
+            settings.style.buttonBarLeftContentInset = 0
+            settings.style.buttonBarRightContentInset = 0
+            changeCurrentIndexProgressive = { [weak self] (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
+            guard changeCurrentIndex == true else { return }
+            oldCell?.label.textColor = .black
+            newCell?.label.textColor = self?.purpleInspireColor
+            }
+```
+
+> 부모 뷰의 viewDidLoad()에 넣어줘야할 코드. 메뉴 사이즈 및 색상을 지정해준다.
+
+<img src="./img/parentstoryboard.png" alt = "tab icon" style="zoom:25%;" width="300px" />
+
+> 메뉴를 구성하기 위해서 상단에 스크롤뷰를 놓고, 그 내부에 자식 뷰들의 전환이 일어날 수 있도록 컬렉션뷰를 넣어준다.(이미지참고. 더 자세한 constraint값 조정사항은 위에 걸어놓은 튜토리얼 링크 참고)
+
+👉 step2. childViewController _ 내 프로젝트 기준으로는 child1(국내배송), child2(해외배송)로 지정
+
+```swift
+class child2ViewController: UIViewController, IndicatorInfoProvider{
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+        }
+        
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+        }
+        
+        func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+            return IndicatorInfo(title: "해외배송")
+        }
+    }
+
+```
+
+> 자식 뷰에는 XLPagerTabStrip을 import한 뒤, 클래스 내부에 viewDidLoad(), didReceiveMemoryWarning(), indicatorInfo() 함수를 써준다.
+>
+> indicatorInfo() 함수 내부 return 부분이 바로 우리가 메뉴 이름으로 띄울 내용이 되는 것. 여기서 지정해준 title이 바로 메뉴에 나타나는 이름이 된다.
+
+👉 step3. parentViewController에 이어서 코드 작성
+
+```swift
+override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
+let child_1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "child1")
+let child_2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "child2")
+return [child_1, child_2]
+}
+```
+
+> 자식 뷰들을 호출해와서 한 화면에 보여주기 위해 필요한 코드. 자식ViewController별로 지정된 identifer를 사용하여 호출한다.
+
+✨ drop down menu bar
+
+<img src="./img/dropdown.png" alt = "tab icon" style="zoom:25%;" width="300px" />
+
+> DropDown 라이브러리 import 해오기
+
+```swift
+var dropDown:DropDown?
+'''skip'''
+override func awakeFromNib() {
+        super.awakeFromNib()
+        dropDown = DropDown()
+        dropDown?.anchorView = button
+        dropDown?.dataSource = ["50 X 90 미네랄", "60 X 100 미네랄"]
+        button.addTarget(self, action: #selector(dropDownButton), for: .touchUpInside)
+        dropDown?.selectionAction = { [unowned self] (index: Int, item: String) in self.button.setTitle(item, for: .normal)
+        }
+// Initialization code 
+}
+```
+
+> dataSource _ 선택할 옵션 뭐 들어갈건지 넣어주기
+>
+> selectAction _ 드롭다운 선택 후 해당 아이템 선택하면 선택한 아이템 문자열이 그대로 버튼 타이틀에 나타나게 된다.
+
+✨ 서버통신 GET
+
+> 지난번 세미나에서 진행한 회원가입과 로그인 실습 과제는 POST방식이었으나 이번주 서버 협동 세미나에서는 GET방식으로 진행하였다! 
+
+```swift
+struct basketService{
+    
+   static let shared = basketService()
+       
+       func getBasketService(completion:@escaping (NetworkResult<Any>) -> Void){
+   //        var bannerList : [BannerInfo] = []
+           let header: HTTPHeaders = ["Content-Type":"application/json"]
+           let dataRequest = Alamofire.request(APIConstants.shoppingbagURL,method: .get,parameters:nil,encoding: JSONEncoding.default, headers: header)
+           dataRequest.responseData { dataResponse in
+               switch dataResponse.result {
+               case .success:
+                   guard let statusCode = dataResponse.response?.statusCode else { return}
+                   print(statusCode)
+                   guard let value = dataResponse.result.value else {return}
+                   let networkResult = self.judge(by: statusCode, value)
+                   completion(networkResult)
+               case .failure: completion(.serverErr)
+               }
+           }
+           
+       }
+       private func judge(by statusCode:Int,_ data:Data) -> NetworkResult<Any>{
+           switch statusCode {
+           case 200: return decodingCart(by: data)
+           default: return .serverErr
+           }
+       }
+       private func decodingCart(by data:Data)->NetworkResult<Any>{
+           let decoder = JSONDecoder()
+           guard let decodedData = try? decoder.decode(Basket.self,from: data) else {//print("?")
+               return .serverErr}
+           guard let itemInfo = decodedData.data else {
+               //print("여기")
+               return .requestErr(decodedData.message)}
+        return .success(itemInfo.result1)
+       }
+    
+    
+}
+
+```
+
+> decodingCart()가 본격적으로 서버 연결 성공하면 데이터 받아오게되는 함수. 
+
+```swift
+private var cartItems: [Delivery] = []
+'''생략'''
+basketService.shared.getBasketService(){ networkResult in
+                switch networkResult {
+               
+                    
+                case .success(let basket):
+                     guard let basket = basket as? [Delivery] else {return}
+                     //print(basket)
+                     self.cartItems = basket
+                     print(self.cartItems)
+                     DispatchQueue.main.async {
+                        self.itemTableView.reloadData()
+                    }
+                     self.itemTableView.reloadData() // 이렇게 reloadData()다시!
+                    
+                case .requestErr(let message):
+                    guard let message = message as? String else {return}
+                    print(message)
+                
+                case .serverErr:
+                    print("serverErr")
+             
+                }
+```
+
+> ❗️case .success인데 왜 내 테이블뷰에는 데이터가 넘어오지 않을까...
+>
+> 엑코를 실행하면 테이블뷰를 포함한 뷰를 띄우는 동시에 네트워크 통신도 동시에 시작! 
+>
+> 여기서 내가 만들어놓은 뷰가 시뮬레이터에 뜨는 시간보다 서버에서 데이터 받아오는데 시간이 좀 더 소요되기 때문에 내 시뮬레이터에는 통신 전 비어있는 셀 값이 뜨게 되는 것
+>
+> 따라서 네트워크 통신이 끝나고 테이블 뷰 셀 데이터를 다시 업데이트 시켜줘야함!
+
+✨ Kingfisher
+
+```swift
+import Foundation
+import UIKit
+import Kingfisher
+// Kingfisher를 이용하여 url로부터 이미지를 가져오는 extension
+extension UIImageView {
+    public func imageFromUrl(_ urlString: String?, defaultImgPath : String) {
+        let defaultImg = UIImage(named: defaultImgPath)
+        if let url = urlString {
+            if url.isEmpty {
+                self.image = defaultImg
+            } else {
+                self.kf.setImage(with: URL(string: url), placeholder: defaultImg, options: [.transition(ImageTransition.fade(0.5))])
+            }
+        } else {
+            self.image = defaultImg
+        }
+    }
+}
+
+```
+
+> 이미지 캐싱하는 kingfisher사용하여 extension파일 만들기
+>
+> imageFromurl() 함수 사용하여 이미지url을 통해 이미지 띄워놓기
+>
+> defaultImgPath는 이미지 띄워지기 전의 기본 이미지 설정해주는 것

@@ -16,9 +16,11 @@ class MainViewController: UIViewController, BEMCheckBoxDelegate {
     @IBOutlet weak var email: UIView!
     @IBOutlet weak var password: UIView!
     
+    let checkbox = BEMCheckBox.init(frame:CGRect.init(x: CGFloat(43), y: CGFloat(370), width: CGFloat(15), height: CGFloat(15)))
     override func viewDidLoad() {
-        //checkBox.delegate = self
+
         super.viewDidLoad()
+        self.view.addSubview(checkbox)
         // Do any additional setup after loading the view.
         login.layer.cornerRadius = 24.0
         //signin.layer.cornerRadius = 22.0
@@ -29,12 +31,8 @@ class MainViewController: UIViewController, BEMCheckBoxDelegate {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear// 네비게이션 바 투명하게 만들기
+       
     }
-    
-    //func didTap(_ checkBox: BEMCheckBox) {
-    //   UserDefaults.standard.set()
-    //}
-
     
     @IBAction func moveTab(_ sender: UIButton) {
         
@@ -42,16 +40,27 @@ class MainViewController: UIViewController, BEMCheckBoxDelegate {
         guard let inputID = idTextField.text else { return }
         guard let inputPWD = pwTextField.text else { return }
         
+        
+     
+          
         LoginService.shared.login(id: inputID, pwd: inputPWD) { networkResult in // 미리 정의해둔 싱글톤 객체 통해 데이터 생성
             switch networkResult {
-                
             case .success(let token): //성공. 토큰을 디폴트 데이터베이스에 저장한 후, 다음 화면으로 전환하게 된다
                 guard let token = token as? String else { return }
                 UserDefaults.standard.set(token, forKey: "token")
+          
+                if self.checkbox.on == true
+                {
+                    UserDefaults.standard.set(self.idTextField.text, forKey: "inputID")
+                    UserDefaults.standard.set(self.pwTextField.text, forKey: "inputPWD")
+                }
+                
                 guard let tabbarController = self.storyboard?.instantiateViewController(identifier:
                     "Tab") as? UITabBarController else { return }
                 tabbarController.modalPresentationStyle = .fullScreen
                 self.present(tabbarController, animated: true, completion: nil)
+                // 자동로그인버튼 체크 시 로그인하면서 id, pw 저장하기
+                
                 
             case .requestErr(let message): // 실패
                     
